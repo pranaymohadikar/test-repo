@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 from typing import List
 
 #to get this file automatically trigerred we have added -e . in requirements.txt but it shouldnot read that so fofr this
-
+#init files in every folder to call that 
 hyphen_e_dot = "-e ."
 
 def get_requirements(file_path:str)->List[str]:
