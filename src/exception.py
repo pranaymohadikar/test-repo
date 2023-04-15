@@ -1,5 +1,8 @@
 import sys
-import logging
+sys.path.append('D:\\coding _sessions\\test_project\\src\\logger.py')
+from .logger import logging
+
+
 
 #creating function for the error message details
 
@@ -7,7 +10,7 @@ import logging
 def error_message_detail(error, error_detail:sys):
     _,_,exc_tb = error_detail.exc_info()      #exc_tb will give on whicih file or line the exception has occured.
     file_name = exc_tb.tb_frame.f_code.co_filename
-    error_message = "Error occured in python script [{0}] liine number [{1}] error message [{2}]".format(
+    error_message = "Error occured in python script [{0}] line number [{1}] error message [{2}]".format(
         file_name, exc_tb.tb_lineno, str(error)
 
         
