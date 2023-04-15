@@ -1,6 +1,6 @@
 import sys
-sys.path.append('D:\\coding _sessions\\test_project\\src\\logger.py')
-from .logger import logging
+sys.path.append('D:\\coding _sessions\\test_project')
+from src.logger import logging
 
 
 
