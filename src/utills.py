@@ -1,1 +1,35 @@
 #here common functionalities which could be used in entire applications
+
+
+import sys
+import os
+import pandas as pd
+import numpy as np
+import dill
+
+sys.path.append('D:\\coding _sessions\\test_project')
+from src.logger import logging
+from src.exception import CustomException
+
+
+#for savepath creating the function
+
+def save_object(file_path, obj):
+    try:
+        
+        dir_path = os.path.dirname(file_path)
+
+        os.makedirs(dir_path, exist_ok=True)
+
+        with open(file_path, "wb") as file_obj:
+            dill.dump(obj, file_obj)
+    except Exception as e:
+        raise CustomException(e, sys)
+
+ 
+
+
+
+
+
+
